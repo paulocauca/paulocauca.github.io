@@ -552,9 +552,75 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
 .faith__item p:last-of-type { margin-bottom: 0; }
 .faith__item .card__link { margin-top: .9rem; }
 
+/* ── Verse (closes the Faith section) ─────────────────────── */
+
+.verse {
+  margin: 2.6rem 0 0;
+  padding: 2.2rem 1.5rem .4rem;
+  text-align: center;
+  position: relative;
+}
+/* small centred rule above the quote, in place of quotation marks */
+.verse::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 34px; height: 1px;
+  background: var(--rule);
+}
+.verse blockquote {
+  margin: 0 auto;
+  max-width: 34rem;
+  font-family: var(--f-display);
+  font-weight: 400;
+  font-size: clamp(1.12rem, 2.1vw, 1.42rem);
+  line-height: 1.45;
+  letter-spacing: -.012em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.verse figcaption {
+  margin-top: 1rem;
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.verse__ver { color: var(--accent-ink); }
+
+@media (max-width: 620px) {
+  .verse { padding-left: 0; padding-right: 0; }
+}
+
 /* ── Contact + footer ─────────────────────────────────────── */
 
-.contact { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+/* Email shown as plain, selectable text — deliberately not a mailto link. */
+.email {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin: 1.6rem 0 0;
+  padding: .6rem .95rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--card);
+}
+.email__k {
+  font-family: var(--f-mono);
+  font-size: .64rem; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.email__v {
+  font-family: var(--f-mono);
+  font-size: .88rem;
+  color: var(--ink);
+  user-select: all;   /* one click selects the whole address */
+}
+
+.contact { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.1rem; }
 
 .foot {
   border-top: 1px solid var(--rule);

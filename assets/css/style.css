@@ -554,7 +554,31 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
 
 /* ── Contact + footer ─────────────────────────────────────── */
 
-.contact { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.6rem; }
+/* Email shown as plain, selectable text — deliberately not a mailto link. */
+.email {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .7rem;
+  margin: 1.6rem 0 0;
+  padding: .6rem .95rem;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: var(--card);
+}
+.email__k {
+  font-family: var(--f-mono);
+  font-size: .64rem; letter-spacing: .09em; text-transform: uppercase;
+  color: var(--ink-3);
+}
+.email__v {
+  font-family: var(--f-mono);
+  font-size: .88rem;
+  color: var(--ink);
+  user-select: all;   /* one click selects the whole address */
+}
+
+.contact { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.1rem; }
 
 .foot {
   border-top: 1px solid var(--rule);

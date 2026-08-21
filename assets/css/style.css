@@ -172,6 +172,37 @@ a { color: var(--accent-ink); text-decoration: none; }
 .rail__links a:hover { color: var(--ink); border-color: var(--ink-3); background: var(--card); }
 .rail__links svg { width: 16px; height: 16px; fill: currentColor; }
 
+/* preferences row: theme + language */
+.rail__prefs {
+  display: flex; align-items: center;
+  gap: .9rem;
+  flex-wrap: wrap;
+}
+
+/* language switch */
+.lang {
+  display: inline-flex; align-items: center;
+  font-family: var(--f-mono);
+  font-size: .72rem;
+  letter-spacing: .06em;
+  border: 1px solid var(--rule);
+  border-radius: 7px;
+  overflow: hidden;
+}
+.lang a, .lang__on {
+  padding: .22rem .48rem;
+  line-height: 1.4;
+  color: var(--ink-3);
+  transition: color .18s ease, background .18s ease;
+}
+.lang a:hover { color: var(--ink); background: var(--card); }
+.lang__on {
+  color: var(--ink);
+  font-weight: 500;
+  background: var(--card);
+}
+.lang a + .lang__on, .lang__on + a { border-left: 1px solid var(--rule); }
+
 /* theme toggle */
 .theme {
   align-self: flex-start;
@@ -633,6 +664,18 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
 
 /* ── Responsive ───────────────────────────────────────────── */
 
+/* Short desktop windows: tighten the rail so its bottom row
+   (theme + language) stays inside the sticky viewport. */
+@media (min-width: 901px) and (max-height: 860px) {
+  .rail__inner {
+    gap: .75rem;
+    padding-top: 2rem;
+    padding-bottom: 1.25rem;
+  }
+  .avatar { width: 112px; height: 112px; }
+  .rail__name { font-size: 1.55rem; }
+}
+
 @media (max-width: 900px) {
   .shell { grid-template-columns: 1fr; gap: 0; }
 
@@ -645,7 +688,7 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
     grid-template-areas:
       "pic  id"
       "nav  nav"
-      "soc  soc";
+      "soc  prf";
     align-items: center;
     gap: 1.25rem;
     border-bottom: 1px solid var(--rule);
@@ -676,7 +719,7 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
   .rail__nav a.is-active { border-left: 0; border-bottom-color: var(--accent); }
 
   .rail__links { grid-area: soc; margin-top: 0; }
-  .theme { position: absolute; top: 2.9rem; right: 0; }
+  .rail__prefs { grid-area: prf; justify-self: end; gap: .75rem; }
   .rail { position: relative; }
 
   .content { padding-top: 2.25rem; }
@@ -692,7 +735,7 @@ html[data-theme="dark"] .btn--solid { color: #0d1319; }
 }
 
 @media print {
-  .rail__nav, .rail__links, .theme, .intro__cta, .skip-link { display: none; }
+  .rail__nav, .rail__links, .rail__prefs, .intro__cta, .skip-link { display: none; }
   .shell { grid-template-columns: 1fr; }
   body { background: #fff; color: #000; font-size: 11pt; }
   .card, .proj, .faith__item, .venture { break-inside: avoid; }

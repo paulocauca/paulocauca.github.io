@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paulo Cauca — Cibersegurança &amp; Software</title>
+<meta name="description" content="Paulo Cauca — especialista sênior em cibersegurança em Curitiba, Brasil. Mais de 18 anos entre pagamentos, telecom e saúde. ISO 27001 / 27701 / 27018 e PCI DSS. Sócio da Concept Clin, ClinApp e Ryzam Secure.">
+<meta name="author" content="Paulo Cauca">
+<link rel="canonical" href="https://paulocauca.github.io/pt/">
+
+<link rel="alternate" hreflang="en" href="https://paulocauca.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://paulocauca.github.io/pt/">
+<link rel="alternate" hreflang="x-default" href="https://paulocauca.github.io/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Paulo Cauca — Cibersegurança &amp; Software">
+<meta property="og:description" content="Especialista sênior em cibersegurança em Curitiba, Brasil. Mais de 18 anos entre pagamentos, telecom e saúde. Sócio da Concept Clin, ClinApp e Ryzam Secure.">
+<meta property="og:url" content="https://paulocauca.github.io/pt/">
+<meta property="og:image" content="https://paulocauca.github.io/assets/img/avatar.jpg">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@paulocauca">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23132a3e'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='52' fill='%23f7f5f1' text-anchor='middle'%3EPC%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+
+<script>
+  /* Set the theme before first paint to avoid a flash. */
+  (function () {
+    try {
+      var t = localStorage.getItem('pc-theme');
+      if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', t);
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+<div class="shell">
+
+  <!-- ───────────── Left rail ───────────── -->
+  <aside class="rail">
+    <div class="rail__inner">
+
+      <img class="avatar" src="../assets/img/avatar.jpg" width="160" height="160"
+           alt="Retrato de Paulo Cauca" fetchpriority="high">
+
+      <div class="rail__id">
+        <h1 class="rail__name">Paulo Cauca</h1>
+        <p class="rail__role">Especialista Sênior em Cibersegurança</p>
+        <p class="rail__place">
+          <svg viewBox="0 0 24 24" aria-hidden="true" class="ico"><path d="M12 21s7-6.1 7-11a7 7 0 1 0-14 0c0 4.9 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          Curitiba, Brasil
+        </p>
+      </div>
+
+      <nav class="rail__nav" aria-label="Seções">
+        <a href="#about">Sobre</a>
+        <a href="#help">Como posso ajudar</a>
+        <a href="#career">Carreira</a>
+        <a href="#education">Formação</a>
+        <a href="#ventures">Empresas</a>
+        <a href="#projects">Projetos</a>
+        <a href="#studies">Estudos</a>
+        <a href="#notes">Notas</a>
+        <a href="#books">Livros</a>
+        <a href="#faith">Fé &amp; trabalho</a>
+        <a href="#contact">Contato</a>
+      </nav>
+
+      <div class="rail__links">
+        <a href="https://github.com/paulocauca" rel="me noopener" target="_blank" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/paulocauca/" rel="me noopener" target="_blank" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.78 2.5 4.78 5.76V21h-4v-5.6c0-1.34-.03-3.06-1.9-3.06-1.9 0-2.2 1.45-2.2 2.96V21H9z"/></svg>
+        </a>
+        <a href="https://x.com/paulocauca" rel="me noopener" target="_blank" aria-label="X">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 3h3.2l-7 8 8.2 10h-6.4l-5-6.1L4.8 21H1.6l7.5-8.6L1.2 3h6.6l4.5 5.6L17.5 3Zm-1.1 16h1.8L7.7 4.9H5.8L16.4 19Z"/></svg>
+        </a>
+        <a href="#contact" aria-label="Dados de contato">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="m3.5 6 8.5 6.5L20.5 6" fill="none" stroke="currentColor" stroke-width="1.7"/></svg>
+        </a>
+      </div>
+
+      <div class="rail__prefs">
+        <button class="theme" type="button" aria-label="Alternar tema de cor"
+                data-label-dark="Escuro" data-label-light="Claro">
+          <span class="theme__dot"></span><span class="theme__label">Escuro</span>
+        </button>
+
+        <nav class="lang" aria-label="Idioma">
+          <a href="../" hreflang="en" lang="en">EN</a>
+          <span class="lang__on" aria-current="true">PT</span>
+        </nav>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ───────────── Content ───────────── -->
+  <main id="main" class="content">
+
+    <!-- Intro -->
+    <header class="intro">
+      <p class="eyebrow">Engenharia de segurança · Governança &amp; compliance · Healthtech</p>
+      <p class="lede">
+        Dezoito anos depois, a parte de que mais gosto continua sendo a de ainda não saber algo.
+        Estudo em aberto, e tenho prazer em ajudar quem está enfrentando os mesmos problemas.
+      </p>
+      <p class="intro__sub">
+        Por isso este site é menos um portfólio e mais um conjunto de anotações deixadas onde outras
+        pessoas possam encontrá-las: material de estudo, código que funciona e o raciocínio por trás
+        das decisões. Se algo aqui te poupar uma tarde, já cumpriu seu papel — e se você travou em
+        algo que eu já resolvi, é só perguntar.
+      </p>
+      <div class="intro__cta">
+        <a class="btn btn--solid" href="#help">Como posso ajudar</a>
+        <a class="btn" href="#projects">Ver o trabalho atual</a>
+      </div>
+    </header>
+
+    <!-- Sobre -->
+    <section id="about" class="sec">
+      <h2 class="sec__title"><span class="sec__num">01</span>Sobre</h2>
+      <div class="prose">
+        <p>
+          Sou Paulo Cauca, especialista sênior em cibersegurança, baseado em Curitiba, Brasil. Passei
+          quase duas décadas em tecnologia, e o caminho não foi uma linha reta: comecei em sistemas de
+          telecom e engenharia de dados, passei anos cuidando de plataformas de BI e big data em escala
+          nacional, e depois migrei para liderança de infraestrutura e segurança — e fiquei ali porque
+          é onde estão os problemas que acho mais interessantes.
+        </p>
+        <p>
+          Hoje trabalho com engenharia de segurança para pagamentos cross-border no <strong>EBANX</strong>,
+          depois de construir e liderar a área de segurança da informação por lá — certificações,
+          governança, identidade e o trabalho de cultura que faz tudo isso se sustentar. Antes disso,
+          construí do zero um time de cibersegurança na Ligga Telecom e liderei times de BI, big data e
+          plataforma de tráfego na Vivo e na GVT.
+        </p>
+        <p>
+          Também sou sócio de três empresas — <strong>Concept Clin</strong>,
+          <strong>ClinApp</strong> e <strong>Ryzam Secure</strong> — que é onde boa parte do que penso
+          sobre software para saúde e segurança como produto é testado com clientes reais, e não em
+          slides.
+        </p>
+        <p>
+          Duas coisas se mantiveram constantes em tudo isso: gosto de times que melhoram enquanto
+          entregam, e acredito que os negócios são um lugar legítimo para fazer o bem, não apenas uma
+          forma de financiá-lo depois — falo mais sobre isso <a href="#faith">mais abaixo</a>.
+        </p>
+      </div>
+
+      <ul class="facts">
+        <li><span class="facts__k">Experiência</span><span class="facts__v">Mais de 18 anos em tecnologia</span></li>
+        <li><span class="facts__k">Certificações sob minha gestão</span><span class="facts__v">ISO 27001 · 27701 · 27018 · PCI DSS</span></li>
+        <li><span class="facts__k">Liderança</span><span class="facts__v">Times multidisciplinares de 20+ pessoas</span></li>
+        <li><span class="facts__k">Domínios</span><span class="facts__v">Pagamentos · Telecom · Saúde</span></li>
+      </ul>
+    </section>
+
+    <!-- Como posso ajudar -->
+    <section id="help" class="sec">
+      <h2 class="sec__title"><span class="sec__num">02</span>Como posso ajudar</h2>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Revisão de segurança de um produto</h3>
+          <p>Modelagem de ameaças, revisão de arquitetura, decisões de autenticação e proteção de dados para times que estão entregando algo sensível</p>
+        </article>
+
+        <article class="card">
+          <h3>Criptografia pós-quântica</h3>
+          <p>Onde a PQC realmente importa para o seu roadmap, o que "harvest now, decrypt later" significa na prática e como planejar a migração sem reescrever tudo.</p>
+          <a class="card__link" href="https://github.com/paulocauca/pqc" target="_blank" rel="noopener">Abrir o repositório de estudo<span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h3>Estudo para o Security+</h3>
+          <p>Todo o meu material de estudo do CompTIA Security+, em aberto. Gratuito, reutilizável e organizado do jeito que eu gostaria que estivesse quando comecei.</p>
+          <a class="card__link" href="https://github.com/paulocauca/comptia_sec_plus_study" target="_blank" rel="noopener">Abrir o material<span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h3>Software para saúde</h3>
+          <p>Agendamento, dados de pacientes, operação de clínicas e as restrições no formato LGPD/HIPAA. Lições aprendidas construindo e operando o ClinApp em produção.</p>
+          <a class="card__link" href="#ventures">Ver as empresas<span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h3>ISO 27001 &amp; PCI DSS</h3>
+          <p>Conseguir a certificação e mantê-la sem que vire um incêndio anual. Sou responsável por ISO 27001, 27701, 27018 e PCI DSS em produção, além da função de GRC em volta delas.</p>
+          <a class="card__link" href="#contact">Perguntar sobre compliance<span aria-hidden="true">→</span></a>
+        </article>
+
+        <article class="card">
+          <h3>Montar um time de segurança</h3>
+          <p>Já montei um do zero — SIEM, EDR/XDR, WAF, PAM, Zero Trust, maturidade NIST — e mentorei pessoas que migraram de engenharia para segurança.</p>
+          <a class="card__link" href="https://www.linkedin.com/in/paulocauca/" target="_blank" rel="noopener">Falar comigo no LinkedIn<span aria-hidden="true">→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Carreira -->
+    <section id="career" class="sec">
+      <h2 class="sec__title"><span class="sec__num">03</span>Carreira</h2>
+      <p class="sec__intro">
+        Dezoito anos, quatro empresas, uma única direção: de construir sistemas de dados a protegê-los,
+        e de fazer o trabalho a liderar quem o faz. Histórico completo no
+        <a href="https://www.linkedin.com/in/paulocauca/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+
+      <ol class="timeline">
+
+        <li class="tl">
+          <div class="tl__when">2023 — Atual</div>
+          <div class="tl__body">
+            <h3 class="tl__org-name">EBANX</h3>
+            <p class="tl__meta">Pagamentos cross-border · Curitiba, Brasil</p>
+
+            <div class="job">
+              <h4 class="job__title">Especialista Sênior em Cibersegurança</h4>
+              <p class="job__when">Mar 2026 — Atual</p>
+              <p class="job__text">
+                Engenharia de segurança para pagamentos na América Latina — um domínio em que pressão
+                regulatória, fraude e escala chegam todos ao mesmo tempo.
+              </p>
+            </div>
+
+            <div class="job">
+              <h4 class="job__title">Gerente de Segurança da Informação</h4>
+              <p class="job__when">Ago 2023 — Atual</p>
+              <ul class="bullets">
+                <li><strong>Certificações.</strong> Responsável por ISO 27001, ISO 27701, ISO 27018 e PCI DSS — mantendo conformidade contínua, e não apenas passando em uma auditoria anual.</li>
+                <li><strong>Governança, risco &amp; compliance.</strong> Liderei a função de GRC: controles efetivos, mitigação de riscos e operações alinhadas à regulação aplicável.</li>
+                <li><strong>Gestão de identidade e acesso.</strong> Coordenei o time de IAM, protegendo credenciais e acessos conforme as boas práticas de segurança.</li>
+                <li><strong>Conscientização &amp; políticas.</strong> Conduzi programas de conscientização e escrevi as políticas e normas que constroem uma cultura de segurança que as pessoas de fato seguem.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl">
+          <div class="tl__when">2022 — 2023</div>
+          <div class="tl__body">
+            <h3 class="tl__org-name">Ligga Telecom</h3>
+            <p class="tl__meta">Telecomunicações · Curitiba, Brasil</p>
+
+            <div class="job">
+              <h4 class="job__title">Gerente de Infraestrutura de TI &amp; Segurança</h4>
+              <p class="job__when">Jan 2022 — Ago 2023</p>
+              <p class="job__text">
+                Construí do zero a área de cibersegurança e segurança da informação, e estruturei os
+                times de SRE e DataOps junto com ela.
+              </p>
+              <ul class="bullets">
+                <li>Implantei SIEM para gestão de vulnerabilidades e detecção de movimentação lateral; evoluí EPP / EDR / XDR.</li>
+                <li>Implantei WAF, proteção de APIs e PAM; conduzi a maturidade NIST e uma cultura de Zero Trust.</li>
+                <li>Conduzi campanhas de phishing, segurança de perímetro e os programas de política de segurança da informação, desenvolvimento seguro, onboarding e offboarding.</li>
+                <li>Geri um time multidisciplinar com KPIs e OKRs, monitoramento proativo, planejamento orçamentário, 1:1s e feedback 360º.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl">
+          <div class="tl__when">2013 — 2021</div>
+          <div class="tl__body">
+            <h3 class="tl__org-name">Vivo <span class="tl__alt">(Telefônica Brasil)</span></h3>
+            <p class="tl__meta">Telecomunicações · Curitiba &amp; São Paulo, Brasil</p>
+
+            <div class="job">
+              <h4 class="job__title">Coordenador de BI &amp; Big Data de TI</h4>
+              <p class="job__when">Jul 2020 — Dez 2021</p>
+              <ul class="bullets">
+                <li>Responsável pelo planejamento e pela gestão da área de BI e big data de ponta a ponta.</li>
+                <li>Liderei 20 analistas — ciclos contínuos de feedback, definição e acompanhamento de metas, com o mandato permanente de entregar rápido e com relevância.</li>
+                <li>Mantive mais de 20.000 processos críticos rodando diariamente em produção, alimentando as informações sobre as quais a empresa tomava decisões complexas.</li>
+                <li>Geri contratos, fornecedores e todos os SLAs e indicadores da área frente ao plano estratégico da companhia.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h4 class="job__title">Coordenador da Plataforma de Tráfego de TI</h4>
+              <p class="job__when">Abr 2018 — Jul 2020</p>
+              <ul class="bullets">
+                <li>Responsável por todo o tráfego nacional e internacional — mais de 5,3 bilhões de CDRs entre fixo e móvel.</li>
+                <li>Responsável pelo sistema de fraude, peça central na prevenção de perda de receita.</li>
+                <li>Conduzi estratégias proativas e preditivas no time; geri orçamento, contratos e fornecedores.</li>
+              </ul>
+            </div>
+
+            <div class="job">
+              <h4 class="job__title">Consultor de TI</h4>
+              <p class="job__when">Ago 2013 — Mar 2018</p>
+              <ul class="bullets">
+                <li>Responsável pela área de produção de Mediação e BI Finanças, dando suporte a BI (PowerCenter, BusinessObjects, SAS), fraude, conciliação, Detraf, mediação, co-billing e sistemas jurídicos.</li>
+                <li>Planejei e executei a migração do data warehouse e dos data marts de BI para uma nova infraestrutura.</li>
+                <li>Melhorei continuamente os mais de 6.000 processos que rodavam na área.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <li class="tl">
+          <div class="tl__when">2008 — 2013</div>
+          <div class="tl__body">
+            <h3 class="tl__org-name">GVT</h3>
+            <p class="tl__meta">Telecomunicações · Curitiba, Brasil</p>
+
+            <div class="job">
+              <h4 class="job__title">Analista de Sistemas Sênior</h4>
+              <p class="job__when">Set 2008 — Ago 2013</p>
+              <ul class="bullets">
+                <li>Otimizei e melhorei processos em toda a cadeia de BI Finanças.</li>
+                <li>Construí o Portal Financeiro para centralizar os indicadores da área e consolidar dados de infraestrutura para troubleshooting.</li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+      </ol>
+    </section>
+
+    <!-- Formação -->
+    <section id="education" class="sec">
+      <h2 class="sec__title"><span class="sec__num">04</span>Formação</h2>
+      <p class="sec__intro">
+        Quatro especializações, escolhidas para acompanhar para onde o trabalho estava indo, e não onde ele já esteve.
+      </p>
+
+      <ol class="edu">
+        <li class="edu__item">
+          <div class="edu__when">2024 — 2025</div>
+          <div>
+            <h3>Especialização em Inteligência Artificial</h3>
+            <p class="edu__org">Universidade Tecnológica Federal do Paraná (UTFPR)</p>
+          </div>
+        </li>
+        <li class="edu__item">
+          <div class="edu__when">2019 — 2023</div>
+          <div>
+            <h3>Especialização em Ciência de Dados e suas Aplicações</h3>
+            <p class="edu__org">Universidade Tecnológica Federal do Paraná (UTFPR)</p>
+          </div>
+        </li>
+        <li class="edu__item">
+          <div class="edu__when">2022 — 2023</div>
+          <div>
+            <h3>Especialização em Cibersegurança</h3>
+            <p class="edu__org">Instituto de Gestão e Tecnologia da Informação (IGTI)</p>
+          </div>
+        </li>
+        <li class="edu__item">
+          <div class="edu__when">2016 — 2018</div>
+          <div>
+            <h3>Especialização em Desenvolvimento de Aplicações</h3>
+            <p class="edu__org">Pontifícia Universidade Católica do Paraná (PUCPR)</p>
+          </div>
+        </li>
+        <li class="edu__item">
+          <div class="edu__when">2009 — 2012</div>
+          <div>
+            <h3>Tecnólogo em Sistemas para Internet</h3>
+            <p class="edu__org">Centro Universitário Franciscano (UNIFRA)</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Empresas -->
+    <section id="ventures" class="sec">
+      <h2 class="sec__title"><span class="sec__num">05</span>Empresas</h2>
+      <p class="sec__intro">Empresas das quais sou sócio e nas quais atuo ativamente.</p>
+
+      <div class="ventures">
+        <article class="venture">
+          <div class="venture__mark" aria-hidden="true">CC</div>
+          <div>
+            <h3>Concept Clin</h3>
+            <p class="venture__tag">Saúde · Consultório odontológico</p>
+            <p>
+              Consultório odontológico completo em Curitiba e São Mateus do Sul / PR, Brasil
+            </p>
+          </div>
+        </article>
+
+        <article class="venture">
+          <div class="venture__mark" aria-hidden="true">CA</div>
+          <div>
+            <h3>ClinApp</h3>
+            <p class="venture__tag">Healthtech · Pacientes &amp; agendamento</p>
+            <p>
+              Uma plataforma de agendamento odontológico e gestão de dados de pacientes.
+            </p>
+          </div>
+        </article>
+
+        <article class="venture">
+          <div class="venture__mark" aria-hidden="true">RS</div>
+          <div>
+            <h3>Ryzam Secure</h3>
+            <p class="venture__tag">Cibersegurança · Pentest</p>
+            <p>
+              Avaliação de segurança controlada que simula ciberataques reais para identificar
+              vulnerabilidades em sistemas, aplicações, redes ou APIs. O objetivo é descobrir e validar
+              fragilidades de segurança antes que atacantes maliciosos as explorem, ajudando as
+              organizações a entender riscos e melhorar sua postura de segurança.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Projetos -->
+    <section id="projects" class="sec">
+      <h2 class="sec__title"><span class="sec__num">06</span>Projetos atuais</h2>
+      <p class="sec__intro">O que estou construindo agora, fora do trabalho com clientes e empresas.</p>
+
+      <div class="projects">
+        <article class="proj">
+          <header class="proj__head">
+            <h3>Second Brain</h3>
+            <span class="badge badge--active">Em andamento</span>
+          </header>
+          <p>
+            Um sistema pessoal de conhecimento para trabalho técnico: capturar pesquisa, achados de
+            segurança e leituras em um só lugar e, depois, torná-los recuperáveis — e úteis — anos
+            depois. Parte disciplina de anotação, parte engenharia de recuperação. O objetivo final é
+            um sistema que responde perguntas, não um que apenas guarda documentos.
+          </p>
+          <ul class="tags">
+            <li>Gestão do conhecimento</li><li>Recuperação</li><li>Automação</li>
+          </ul>
+        </article>
+
+        <article class="proj">
+          <header class="proj__head">
+            <h3>Criptografia pós-quântica</h3>
+            <span class="badge badge--active">Em andamento</span>
+          </header>
+          <p>
+            Um estudo prático de PQC: implementar e testar os algoritmos padronizados, entender os
+            trade-offs de tamanho de chave e desempenho, e mapear como seria uma migração realista para
+            sistemas que já estão em produção. Público, para que outras pessoas percorram o mesmo
+            caminho mais rápido.
+          </p>
+          <ul class="tags">
+            <li>Criptografia</li><li>Python</li><li>ML-KEM / ML-DSA</li>
+          </ul>
+          <a class="proj__link" href="https://github.com/paulocauca/pqc" target="_blank" rel="noopener">
+            github.com/paulocauca/pqc<span aria-hidden="true">→</span>
+          </a>
+        </article>
+      </div>
+
+      <p class="sec__foot">
+        Mais código — inclusive trabalho em andamento — no
+        <a href="https://github.com/paulocauca?tab=repositories" target="_blank" rel="noopener">GitHub</a>.
+      </p>
+    </section>
+
+    <!-- Estudos -->
+    <section id="studies" class="sec">
+      <h2 class="sec__title"><span class="sec__num">07</span>Linhas de estudo</h2>
+      <p class="sec__intro">
+        Onde estou deliberadamente me aprofundando. Tudo aqui vira, mais cedo ou mais tarde, anotação,
+        código ou algo que eu consiga ensinar.
+      </p>
+
+      <div class="study">
+        <div class="study__row">
+          <h3>Criptografia aplicada &amp; PQC</h3>
+          <p>Esquemas baseados em reticulados, troca de chaves híbrida e a realidade operacional de rotacionar criptografia em sistemas vivos.</p>
+        </div>
+        <div class="study__row">
+          <h3>Trilha de certificações em segurança</h3>
+          <p>CompTIA Security+ como base estruturada — o material de estudo é público e livre para reuso.</p>
+        </div>
+        <div class="study__row">
+          <h3>Arquitetura de software segura</h3>
+          <p>Modelagem de ameaças, fronteiras de microsserviços e privacy-by-design em sistemas de dados de saúde.</p>
+        </div>
+        <div class="study__row">
+          <h3>IA no trabalho de segurança</h3>
+          <p>Onde os modelos de linguagem realmente ajudam quem defende — triagem, revisão de código, recuperação de conhecimento — e onde eles silenciosamente adicionam risco.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Notas -->
+    <section id="notes" class="sec">
+      <h2 class="sec__title"><span class="sec__num">08</span>Notas &amp; novidades</h2>
+      <p class="sec__intro">Entradas curtas. Mais recentes primeiro.</p>
+
+      <ul class="notes">
+        <li class="note">
+          <time datetime="2026-07">Jul 2026</time>
+          <div>
+            <h3>Repositório de estudo de criptografia pós-quântica está público</h3>
+            <p>
+              Abri minhas anotações e implementações de PQC. Cru de propósito — acompanha o que estou
+              aprendendo, e não o que já terminei.
+              <a href="https://github.com/paulocauca/pqc" target="_blank" rel="noopener">Repositório →</a>
+            </p>
+          </div>
+        </li>
+        <li class="note">
+          <time datetime="2026-07">Jul 2026</time>
+          <div>
+            <h3>Material de estudo do CompTIA Security+, em aberto</h3>
+            <p>
+              Publiquei todo o conjunto de anotações que venho construindo para o Security+. Livre para
+              usar, forkar ou corrigir.
+              <a href="https://github.com/paulocauca/comptia_sec_plus_study" target="_blank" rel="noopener">Repositório →</a>
+            </p>
+          </div>
+        </li>
+
+        <!--
+          EDITE AQUI: adicione uma nova nota no TOPO desta lista.
+          <li class="note">
+            <time datetime="2026-09">Set 2026</time>
+            <div>
+              <h3>Título</h3>
+              <p>Duas ou três frases. Linke para fora se houver algo a ler.</p>
+            </div>
+          </li>
+        -->
+      </ul>
+    </section>
+
+    <!-- Livros -->
+    <section id="books" class="sec">
+      <h2 class="sec__title"><span class="sec__num">09</span>Livros</h2>
+      <p class="sec__intro">
+        O que estou lendo e o que continuo recomendando.
+      </p>
+
+      <div class="books">
+        <article class="book">
+          <h3>Serious Cryptography</h3>
+          <p class="book__by">Jean-Philippe Aumasson</p>
+          <p>O livro que entrego a quem quer parar de tratar criptografia como caixa-preta.</p>
+        </article>
+        <article class="book">
+          <h3>Threat Modeling</h3>
+          <p class="book__by">Adam Shostack</p>
+          <p>Transforma uma atividade guiada por intuição em algo que um time consegue repetir e revisar.</p>
+        </article>
+        <article class="book">
+          <h3>Designing Data-Intensive Applications</h3>
+          <p class="book__by">Martin Kleppmann</p>
+          <p>Ainda é o relato mais claro dos trade-offs por trás de cada decisão em sistemas distribuídos.</p>
+        </article>
+        <article class="book">
+          <h3>Business as Mission</h3>
+          <p class="book__by">C. Neal Johnson</p>
+          <p>A base de como penso sobre ser dono de empresas em vez de apenas trabalhar nelas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Fé -->
+    <section id="faith" class="sec">
+      <h2 class="sec__title"><span class="sec__num">10</span>Fé &amp; trabalho</h2>
+      <div class="prose">
+        <p>
+          Sou cristão, e não guardo isso em um compartimento separado do meu trabalho. A versão prática:
+          o ofício importa, as pessoas afetadas pelo sistema importam, e uma empresa é um lugar legítimo
+          para fazer o bem, e não apenas um meio de financiá-lo depois.
+        </p>
+      </div>
+
+      <div class="faith">
+        <article class="faith__item">
+          <h3>FaithTech</h3>
+          <p>
+            Uma comunidade global de cristãos em tecnologia — construindo, aprendendo e colocando a
+            habilidade técnica a serviço de algo além da próxima entrega. Faço parte da comunidade de
+            Curitiba.
+          </p>
+          <a class="card__link" href="https://faithtech.com/city/curitiba/" target="_blank" rel="noopener">FaithTech Curitiba<span aria-hidden="true">→</span></a>
+        </article>
+        <article class="faith__item">
+          <h3>Business as Mission (BAM)</h3>
+          <p>
+            Construir negócios reais e lucrativos que também são intencionais quanto ao bem que fazem —
+            para funcionários, clientes e a cidade onde operam. Não é caridade anexada a uma empresa;
+            é a própria empresa fazendo esse trabalho.
+          </p>
+        </article>
+        <article class="faith__item">
+          <h3>Empreendedorismo do Reino</h3>
+          <p>
+            Ser dono como quem administra o que lhe foi confiado. Isso muda o que você otimiza, quem
+            você contrata, como trata um trimestre ruim e o que você está disposto a entregar.
+          </p>
+        </article>
+      </div>
+
+      <figure class="verse">
+        <blockquote>
+          Tudo o que fizerem, façam de todo o coração, como para o Senhor,
+          e não para os homens.
+        </blockquote>
+        <figcaption>Colossenses 3:23 <span class="verse__ver">NVI</span></figcaption>
+      </figure>
+    </section>
+
+    <!-- Contato -->
+    <section id="contact" class="sec sec--last">
+      <h2 class="sec__title"><span class="sec__num">11</span>Contato</h2>
+      <div class="prose">
+        <p>
+          Aberto a conversas sobre engenharia de segurança, healthtech, negócios movidos por fé e mentoria.
+        </p>
+      </div>
+      <p class="email">
+        <span class="email__k">E-mail</span>
+        <span class="email__v">paulocauca@gmail.com</span>
+      </p>
+
+      <div class="contact">
+        <a class="btn" href="https://www.linkedin.com/in/paulocauca/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/paulocauca" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <p>© <span id="year">2026</span> Paulo Cauca · Curitiba, Brasil</p>
+      <p>Feito à mão. <a href="https://github.com/paulocauca/paulocauca.github.io" target="_blank" rel="noopener">Código-fonte</a>.</p>
+    </footer>
+
+  </main>
+</div>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

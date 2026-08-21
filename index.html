@@ -8,11 +8,17 @@
 <meta name="author" content="Paulo Cauca">
 <link rel="canonical" href="https://paulocauca.github.io/">
 
+<link rel="alternate" hreflang="en" href="https://paulocauca.github.io/">
+<link rel="alternate" hreflang="pt-BR" href="https://paulocauca.github.io/pt/">
+<link rel="alternate" hreflang="x-default" href="https://paulocauca.github.io/">
+
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Paulo Cauca — Cybersecurity &amp; Software">
 <meta property="og:description" content="Cybersecurity senior specialist in Curitiba, Brazil. 18+ years across payments, telecom and healthcare. Owner of Concept Clin, ClinApp and Ryzam Secure.">
 <meta property="og:url" content="https://paulocauca.github.io/">
 <meta property="og:image" content="https://paulocauca.github.io/assets/img/avatar.jpg">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="pt_BR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@paulocauca">
 
@@ -84,9 +90,17 @@
         </a>
       </div>
 
-      <button class="theme" type="button" aria-label="Toggle color theme">
-        <span class="theme__dot"></span><span class="theme__label">Dark</span>
-      </button>
+      <div class="rail__prefs">
+        <button class="theme" type="button" aria-label="Toggle color theme"
+                data-label-dark="Dark" data-label-light="Light">
+          <span class="theme__dot"></span><span class="theme__label">Dark</span>
+        </button>
+
+        <nav class="lang" aria-label="Language">
+          <span class="lang__on" aria-current="true">EN</span>
+          <a href="pt/" hreflang="pt-BR" lang="pt-BR">PT</a>
+        </nav>
+      </div>
     </div>
   </aside>
 

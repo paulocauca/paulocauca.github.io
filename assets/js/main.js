@@ -1,4 +1,4 @@
-/* Small progressive enhancements: theme memory, scrollspy, footer year. */
+/* Small progressive enhancements: theme memory, language switch, scrollspy, footer year. */
 (function () {
   'use strict';
 
@@ -9,9 +9,13 @@
   var btn = document.querySelector('.theme');
   var label = btn && btn.querySelector('.theme__label');
 
+  /* The button carries its own wording, so each language page reads right. */
+  var wordDark = (btn && btn.getAttribute('data-label-dark')) || 'Dark';
+  var wordLight = (btn && btn.getAttribute('data-label-light')) || 'Light';
+
   function apply(theme) {
     root.setAttribute('data-theme', theme);
-    if (label) label.textContent = theme === 'dark' ? 'Light' : 'Dark';
+    if (label) label.textContent = theme === 'dark' ? wordLight : wordDark;
     if (btn) btn.setAttribute('aria-pressed', String(theme === 'dark'));
   }
 
@@ -27,6 +31,17 @@
       try { localStorage.setItem(STORE, next); } catch (e) { /* ignore */ }
     });
   }
+
+  /* ── Language switch ─────────────────────────────────────── */
+  /* Each language is its own page (/ and /pt/). Carry the current
+     section anchor across so the reader lands where they were. */
+  var langLinks = document.querySelectorAll('.lang a');
+  Array.prototype.forEach.call(langLinks, function (a) {
+    a.addEventListener('click', function () {
+      var hash = window.location.hash;
+      if (hash && hash.length > 1) a.setAttribute('href', a.getAttribute('href').split('#')[0] + hash);
+    });
+  });
 
   /* ── Scrollspy ───────────────────────────────────────────── */
   var links = Array.prototype.slice.call(document.querySelectorAll('.rail__nav a'));
